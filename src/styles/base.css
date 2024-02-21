@@ -1,0 +1,8 @@
+* {
+	color: var(--color-white);
+}
+
+body {
+	background-color: var(--color-background);
+	font-family: sans-serif;
+}

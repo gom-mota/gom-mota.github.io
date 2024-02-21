@@ -1,21 +1,5 @@
-* {
-	color: #f5f8fa;
-	font-family: sans-serif;
-}
-
-body {
-	background-color: #1c2d33;
-}
-
-#nav ul {
-	display: flex;
-	flex-direction: row;
-}
-
-ul li {
-	list-style: none;
-}
-
-#nav ul li:not(:first-child) {
-	margin-left: 2rem;
-}
+@import url('/src/styles/reset.css');
+@import url('/src/styles/variables.css');
+@import url('/src/styles/base.css');
+@import url('/src/pages/Home/styles.css');
+@import url('/src/common/Navbar/styles.css');

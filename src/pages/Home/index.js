@@ -10,7 +10,7 @@ const Home = async () => {
 			return /*html*/ `
 				<h2>Home Page</h2>
 
-				<ul>
+				<ul class="repo_list">
 					${repositoriesList
 						.map(
 							({ name }) => /*html*/ `

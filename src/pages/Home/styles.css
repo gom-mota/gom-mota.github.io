@@ -1,0 +1,7 @@
+.repo_list {
+	list-style: circle;
+}
+
+.repo_list li:not(:first-child) {
+	margin-top: 0.3rem;
+}
