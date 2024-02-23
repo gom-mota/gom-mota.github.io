@@ -1,7 +1,7 @@
 import { GITHUB_PROFILE } from '/src/utils.js'
 
 export const getRepositoryReadmeContent = async (repository) => {
-	const url = `https://api.github.com/repos/${GITHUB_PROFILE}/${repository}/readme`
+	const url = `https://api.github.com/repos/${GITHUB_PROFILE}/${repository}/contents/POST.md`
 
 	const options = {
 		headers: {
