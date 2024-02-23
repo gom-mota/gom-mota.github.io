@@ -1,29 +1,25 @@
-import { getRepositoriesList, registerNavLinks } from './functions.js'
+import {
+	getRepositoriesList,
+	registerRepoClick,
+	renderRepositoriesList,
+} from './functions.js'
 
 const Home = async () => {
-	const repositoriesList = await getRepositoriesList()
+	const repositoriesListData = await getRepositoriesList()
 
 	return {
 		title: 'Home',
 		description: 'This is the Home page',
 		render: () => {
 			return /*html*/ `
-				<h2>Home Page</h2>
+				<h2>Gabriel Mota</h2>
 
-				<ul class="repo_list">
-					${repositoriesList
-						.map(
-							({ name }) => /*html*/ `
-								<li>
-									<a id="repo-${name}" href="/repo/${name}">${name}</a>
-								</li>
-							`
-						)
-						.join('')}
-				</ul>
+				<div class="repo_list_container">
+					${renderRepositoriesList(repositoriesListData)}
+				</div>
         	`
 		},
-		after_render: () => registerNavLinks(repositoriesList),
+		after_render: () => registerRepoClick(repositoriesListData),
 	}
 }
 

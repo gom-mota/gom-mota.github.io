@@ -1,7 +1,69 @@
-.repo_list {
+.repo_list_container {
 	list-style: circle;
+	margin-top: var(--spacing-large);
 }
 
-.repo_list li:not(:first-child) {
-	margin-top: 0.3rem;
+.repo_content {
+	display: flex;
+	cursor: pointer;
+	align-items: flex-start;
+	padding: var(--spacing-medium);
+	border-bottom: 1px solid var(--color-border);
+	justify-content: space-between;
+}
+
+.repo_content:hover {
+	background-color: var(--color-background-light);
+}
+
+.repo_info {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-small);
+	align-items: flex-start;
+	max-width: 690px;
+}
+
+.repo_more {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-medium);
+	align-items: center;
+}
+
+.count_badge {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-xsmall);
+	align-items: center;
+	font-size: var(--text-xsmall);
+}
+
+.language_badge {
+	background: var(--color-badge);
+	padding: var(--spacing-xsmall);
+	border-radius: var(--border-small);
+	letter-spacing: 0.04rem;
+	font-size: var(--text-xsmall);
+}
+
+.repo_action {
+	display: none;
+}
+
+.repo_content:hover .repo_action {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xsmall);
+	font-size: var(--text-xsmall);
+}
+
+.repo_name {
+	font-size: var(--text-medium);
+	font-weight: bold;
+}
+
+.repo_description {
+	font-size: var(--text-small);
+	color: var(--color-description);
 }

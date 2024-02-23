@@ -1,10 +1,10 @@
 * {
-	color: var(--color-white);
+	color: var(--color-text);
 }
 
 body {
 	background-color: var(--color-background);
-	font-family: sans-serif;
+	font-family: var(--font-family);
 }
 
 .container {
