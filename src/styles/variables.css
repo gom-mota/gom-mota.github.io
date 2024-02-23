@@ -1,4 +1,21 @@
 :root {
-	--color-background: #1c2d33;
-	--color-white: #f5f8fa;
+	--color-text: #f5f8fa;
+	--color-description: #c6c6c6;
+	--color-background: #1b2727;
+	--color-background-light: #223030;
+	--color-border: #2d3a3e;
+	--color-badge: #2d3f3f;
+
+	--text-xsmall: 0.8rem;
+	--text-small: 0.9rem;
+	--text-medium: 1rem;
+
+	--border-small: 0.3rem;
+
+	--spacing-xsmall: 0.3rem;
+	--spacing-small: 0.6rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 1.5rem;
+
+	--font-family: 'Lato', sans-serif;
 }
