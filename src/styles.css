@@ -2,4 +2,5 @@
 @import url('/src/styles/variables.css');
 @import url('/src/styles/base.css');
 @import url('/src/pages/Home/styles.css');
-@import url('/src/common/Navbar/styles.css');
+@import url('/src/common/Header/items/Navbar/styles.css');
+@import url('/src/common/Header/styles.css');

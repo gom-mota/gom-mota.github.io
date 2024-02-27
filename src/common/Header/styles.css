@@ -1,0 +1,8 @@
+#header {
+	padding: var(--spacing-medium) 0 var(--spacing-medium) 0;
+	margin-bottom: var(--spacing-xlarge);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}

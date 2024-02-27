@@ -1,8 +1,8 @@
 import './router.js'
-import Navbar from './common/Navbar/index.js'
+import Header from './common/Header/index.js'
 
 const mount = () => {
-	Navbar()
+	Header()
 }
 
 mount()
