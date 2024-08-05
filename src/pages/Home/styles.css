@@ -1,0 +1,66 @@
+.home_highlights_container {
+	margin-top: 1.5rem;
+}
+
+.profile_container {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-medium);
+	justify-content: space-between;
+	margin-bottom: var(--spacing-xlarge);
+}
+
+.profile_base {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-small);
+	max-width: 540px;
+}
+
+.description {
+	margin-top: 0.6rem;
+	line-height: 1.4rem;
+	color: var(--color-description);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.profile_name {
+	font-size: var(--text-large);
+	font-weight: 900;
+}
+
+.profile_avatar img {
+	width: 120px;
+	height: 120px;
+	border-radius: 0.6rem;
+	box-shadow: 0 22px 17px -27px #000000bf;
+}
+
+.profile_social {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-xsmall);
+	margin-top: var(--spacing-medium);
+}
+
+.link_route {
+	margin-top: 1.5rem;
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+	padding: 0.3rem 0.5rem;
+	border-radius: 0.2rem;
+	text-decoration-color: var(--color-description);
+	transition: gap 0.2s ease-out;
+	gap: 0;
+}
+
+.link_route:hover {
+	gap: 0.2rem;
+	text-decoration-color: var(--color-text);
+}
+
+.home_skills_container {
+	margin-bottom: 3rem;
+}

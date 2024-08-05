@@ -1,0 +1,21 @@
+.header_nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.header_nav ul li {
+	list-style: none;
+}
+
+.header_nav ul li:not(:first-child) {
+	margin-left: var(--spacing-large);
+}
+
+.header_nav ul li a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.header_nav ul li a:hover {
+	text-decoration: underline;
+}

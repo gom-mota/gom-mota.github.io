@@ -1,0 +1,93 @@
+.repo_content_link {
+	text-decoration: none;
+}
+
+.repo_content {
+	display: flex;
+	cursor: pointer;
+	background: linear-gradient(20deg, #ffffff08, var(--color-background) 70%);
+	align-items: flex-start;
+	padding: var(--spacing-medium);
+	justify-content: space-between;
+	margin-bottom: 0.7rem;
+	border: 1px solid #ffffff0d;
+	border-radius: 0.3rem;
+	box-shadow: 0 22px 17px -27px #000000bf;
+	z-index: 1;
+	position: relative;
+}
+
+.repo_content::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-20deg, #ffffff08, var(--color-background) 70%);
+	z-index: -1;
+	transition: opacity 0.4s linear;
+	opacity: 0;
+}
+
+.repo_content:hover::before {
+	opacity: 1;
+}
+
+.repo_content:hover .repo_name {
+	text-decoration: underline;
+}
+
+.repo_info_container {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-small);
+	align-items: flex-start;
+	max-width: 690px;
+}
+
+.repo_img {
+	width: 52px;
+	height: 52px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.repo_img ion-icon {
+	font-size: 38px;
+}
+
+.repo_info_content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-small);
+	align-items: flex-start;
+	margin-left: 0.5rem;
+}
+
+.repo_more {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-medium);
+	align-items: center;
+}
+
+.count_badge {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-xsmall);
+	align-items: center;
+	font-size: var(--text-xsmall);
+}
+
+.repo_name {
+	font-size: var(--text-medium);
+	font-weight: bold;
+}
+
+.repo_description {
+	font-size: var(--text-small);
+	color: var(--color-description);
+}

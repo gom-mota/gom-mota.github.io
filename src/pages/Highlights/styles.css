@@ -1,0 +1,99 @@
+.highlights_header_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.highlights_filter_container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+	gap: 1rem;
+	flex-direction: row;
+}
+
+.button-dropdown:focus-within .button-dropdown-menu {
+	display: block;
+}
+
+.button-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.button-dropdown .button-dropdown-menu {
+	position: absolute;
+	top: 100%;
+	border-radius: 3px;
+	right: 0;
+	list-style: none;
+	padding: 0.4rem 0;
+	opacity: 0;
+	background-color: white;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
+	z-index: 1010;
+	visibility: hidden;
+	transition: transform 0.2s ease-in, opacity 0.2s ease-in-out;
+	transform: translateY(-10px);
+}
+
+.button-dropdown .button-dropdown-menu:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	border-top: 0;
+}
+
+.button-dropdown .button-dropdown-menu:after {
+	left: 87%;
+	bottom: 100%;
+	transform: translate(0, 4px);
+	border-bottom-color: #f5f8faf0;
+	border-width: 8px;
+}
+
+.button-dropdown .button-dropdown-menu li {
+	display: block;
+	white-space: nowrap;
+}
+
+.button-dropdown .button-dropdown-menu li ion-icon {
+	color: var(--color-background);
+}
+
+.button-dropdown:focus-within .button-dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(12px);
+}
+
+.button-dropdown .action_button:focus-within {
+	background: #f5f8faf0;
+	color: var(--color-background);
+}
+
+.button-dropdown .action_button:focus-within ion-icon {
+	color: var(--color-background);
+}
+
+.button-dropdown a {
+	text-decoration: none;
+	color: var(--color-background);
+	padding: 0.4rem 1rem;
+	display: flex;
+	flex-direction: row;
+	gap: 0.3rem;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 14px;
+	font-weight: 500;
+	transition: background 0.2s;
+}
+
+.button-dropdown a:hover {
+	background-color: #00000014;
+}

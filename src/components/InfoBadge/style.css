@@ -1,0 +1,18 @@
+.badge_container {
+	background: var(--color-badge);
+	padding: var(--spacing-xsmall);
+	border-radius: var(--border-small);
+	letter-spacing: 0.04rem;
+	font-size: var(--text-xsmall);
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.4rem;
+	box-shadow: 0 6px 17px -10px #000000bf;
+}
+
+.badge_container.large {
+	min-height: 1.2rem;
+	box-shadow: 0 6px 17px -12px #000000bf;
+}

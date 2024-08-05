@@ -1,0 +1,25 @@
+:root {
+	--color-text: #f5f8fa;
+	--color-description: #a9a9a9;
+	--color-background: #1d2229;
+	--color-background-light: #dfdfdf0f;
+	--color-border: #dfdfdf0f;
+	--color-badge: #d8d8d821;
+
+	--text-xsmall: 0.8rem;
+	--text-small: 0.9rem;
+	--text-medium: 1rem;
+	--text-large: 2rem;
+
+	--border-small: 0.3rem;
+
+	--spacing-xsmall: 0.3rem;
+	--spacing-small: 0.6rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 2rem;
+	--spacing-xlarge: 4rem;
+
+	--font-family: 'Lato', sans-serif;
+
+	color-scheme: dark;
+}

@@ -1,0 +1,28 @@
+#header {
+	padding: var(--spacing-medium) 0 var(--spacing-medium) 0;
+	margin-top: var(--spacing-large);
+	margin-bottom: var(--spacing-xlarge);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: var(--text-medium);
+	font-family: monospace;
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size: 17px;
+	letter-spacing: 2px;
+}
+
+.logo_acronym {
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-family: var(--font-family);
+	margin-right: 2px;
+	font-weight: 600;
+}
