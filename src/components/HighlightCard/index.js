@@ -2,7 +2,6 @@ import { conditionalRender } from '/src/functions.js'
 
 class HighlightCard extends HTMLElement {
 	connectedCallback() {
-		const type = this.getAttribute('type')
 		const title = this.getAttribute('title')
 		const url = this.getAttribute('url')
 		const description = this.getAttribute('description')
@@ -16,57 +15,57 @@ class HighlightCard extends HTMLElement {
             @import url('/src/components/HighlightCard/style.css');
         </style>
 
-        <a class="repo_content_link" href="${url}" target="_blank">
-			<div class="repo_content" id="${title}">
-				
-						<div class="repo_info_container">
-									<div class="repo_img">
-										<ion-icon name="${icon}" />
-									</div>
-									
-									<div class="repo_info_content">
-										<span class="repo_name">${title}</span>
-										<span class="repo_description">${description}</span>
-									</div>
-								
+		<div class="highlight_card_container">
+			<a href="${url}" target="_blank">
+				<div class="highlight_icon_container">
+					<ion-icon name="${icon}" />
+				</div>
+
+				<div class="highlight_title_container">
+					<h4>${title}</h4>
+				</div>
+
+				${conditionalRender(
+					language,
+					/*html*/ `
+						<div class="highlight_badge_container">
+							<info-badge content="${language}"></info-badge>
+						</div>
+					`
+				)}
+
+				${conditionalRender(
+					description !== 'null',
+					/*html*/ `
+						<div class="highlight_description_container">
+							<p>${description}</p>
+						</div>
+					`
+				)}
+
+				<div class="highlight_count_container">
+					${conditionalRender(
+						Number(forks),
+						/*html*/ `
+							<div>
+								<ion-icon name="git-network-outline"></ion-icon>
+								<span>${forks}</span>
 							</div>
+						`
+					)}
 
-							${conditionalRender(
-								type === 'repo',
-								/*html*/ `
-								<div class="repo_more">
-								${conditionalRender(
-									Number(forks),
-									/*html*/ `
-										<div class="count_badge">
-											<ion-icon name="git-network-outline"></ion-icon>
-											<span>${forks}</span>
-										</div>
-									`
-								)}
-
-								${conditionalRender(
-									Number(stars),
-									/*html*/ `
-										<div class="count_badge">
-											<ion-icon name="star-outline"></ion-icon>
-											<span>${stars}</span>
-										</div>
-									`
-								)}
-
-								${conditionalRender(
-									language,
-									/*html*/ `
-										<info-badge content="${language}"></info-badge>
-									`
-								)}							
+					${conditionalRender(
+						Number(stars),
+						/*html*/ `
+							<div>
+								<ion-icon name="star-outline"></ion-icon>
+								<span>${stars}</span>
 							</div>
-								`
-							)}
-
-			</div>
-		</a>	
+						`
+					)}
+				</div>
+			</a>
+		</div>
       `
 	}
 }

@@ -1,11 +1,14 @@
-import { renderSocialAccountsList } from './functions.js'
+// Items
+import Social from '/src/common/Social/index.js'
 
 const Footer = () => {
 	const footerElement = null || document.querySelector('#footer')
 
 	footerElement.innerHTML = /*html*/ `
-        <div class="footer">
-            <p>&copy; gommota</p> <div>${renderSocialAccountsList()}</div>
+        <div class="footer_container">
+            <p>&copy; gommota</p> 
+            
+            <div>${Social()}</div>
         </div>
 
 	`

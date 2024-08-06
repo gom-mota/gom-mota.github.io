@@ -13,8 +13,8 @@ export const CONFIG = {
 	github: {
 		username: 'gom-mota',
 		repos: {
-			home: ['beework', 'portfolio-dev'],
-			highlights: ['beework', 'portfolio-dev', 'teste_seidor'],
+			home: ['portfolio-dev', 'beework'],
+			highlights: ['portfolio-dev', 'beework', 'gom-mota.github.io'],
 		},
 	},
 	about: {

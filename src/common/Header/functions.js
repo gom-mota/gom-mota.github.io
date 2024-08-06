@@ -1,3 +1,4 @@
+// Functions
 import { navigateToRoute } from '/src/functions.js'
 
 export const registerNavLinks = (routes) => {

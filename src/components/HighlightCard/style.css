@@ -1,23 +1,25 @@
-.repo_content_link {
-	text-decoration: none;
-}
-
-.repo_content {
-	display: flex;
-	cursor: pointer;
-	background: linear-gradient(20deg, #ffffff08, var(--color-background) 70%);
-	align-items: flex-start;
-	padding: var(--spacing-medium);
-	justify-content: space-between;
-	margin-bottom: 0.7rem;
-	border: 1px solid #ffffff0d;
-	border-radius: 0.3rem;
-	box-shadow: 0 22px 17px -27px #000000bf;
+.highlight_card_container a {
 	z-index: 1;
 	position: relative;
+	display: grid;
+	grid-template-areas:
+		'highlight_icon highlight_title highlight_count'
+		'highlight_icon highlight_badge highlight_badge'
+		'highlight_description highlight_description highlight_description';
+	gap: var(--spacing-small);
+	grid-template-columns: minmax(52px, auto) 1fr;
+	grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+	padding: 1.3rem var(--spacing-regular);
+	text-decoration: none;
+	cursor: pointer;
+	background: linear-gradient(20deg, #ffffff08, var(--color-background) 70%);
+	border: 1px solid #ffffff0d;
+	border-radius: var(--border-small);
+	box-shadow: 0 22px 17px -27px #000000bf;
+	font-size: var(--text-small);
 }
 
-.repo_content::before {
+.highlight_card_container a::before {
 	position: absolute;
 	content: '';
 	top: 0;
@@ -30,64 +32,65 @@
 	opacity: 0;
 }
 
-.repo_content:hover::before {
+.highlight_card_container a:hover::before {
 	opacity: 1;
 }
 
-.repo_content:hover .repo_name {
-	text-decoration: underline;
+.highlight_icon_container {
+	grid-area: highlight_icon;
 }
 
-.repo_info_container {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-small);
-	align-items: flex-start;
-	max-width: 690px;
-}
-
-.repo_img {
-	width: 52px;
-	height: 52px;
-	border-radius: 100%;
+.highlight_icon_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.repo_img ion-icon {
-	font-size: 38px;
+.highlight_icon_container ion-icon {
+	font-size: 42px;
 }
 
-.repo_info_content {
+.highlight_title_container {
+	grid-area: highlight_title;
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing-small);
-	align-items: flex-start;
-	margin-left: 0.5rem;
-}
-
-.repo_more {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-medium);
-	align-items: center;
-}
-
-.count_badge {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-xsmall);
-	align-items: center;
-	font-size: var(--text-xsmall);
-}
-
-.repo_name {
-	font-size: var(--text-medium);
+	justify-content: center;
 	font-weight: bold;
 }
 
-.repo_description {
-	font-size: var(--text-small);
+.highlight_card_container:hover .highlight_title_container {
+	text-decoration: underline;
+}
+
+.highlight_badge_container {
+	grid-area: highlight_badge;
+}
+
+.highlight_description_container {
+	grid-area: highlight_description;
+}
+
+.highlight_description_container p {
 	color: var(--color-description);
+	line-height: 1.1rem;
+}
+
+.highlight_count_container {
+	grid-area: highlight_count;
+	display: flex;
+	padding: 0.2rem 0;
+	flex-direction: row;
+	justify-content: center;
+	gap: var(--spacing-regular);
+	font-size: var(--text-xsmall);
+}
+
+@media only screen and (min-width: 480px) {
+	.highlight_card_container a {
+		grid-template-areas:
+			'highlight_icon highlight_title highlight_count highlight_badge'
+			'highlight_icon highlight_description highlight_description highlight_description';
+		grid-auto-columns: auto;
+		gap: var(--spacing-small) var(--spacing-regular);
+	}
 }

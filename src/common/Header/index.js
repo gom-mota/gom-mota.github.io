@@ -1,18 +1,36 @@
-import { ROUTES } from '/src/utils.js'
+// Functions
 import { registerNavLinks } from './functions.js'
-import Navbar from './items/Navbar/index.js'
+
+// Utils
+import { ROUTES } from '/src/utils.js'
 
 const Header = () => {
 	const headerElement = null || document.querySelector('#header')
 
 	headerElement.innerHTML = /*html*/ `
-		<div class="logo">
-			<span class="logo_acronym">
-				> gom
-			</span> mota_
-		</div>
+		<div class="header_container">
+		
+			<div class="header_logo_container">
+				<span>> gom</span> mota_
+			</div>
 
-        ${Navbar()}
+			<nav>
+				<ul>
+					${Object.entries(ROUTES)
+						.filter(([_, { nav }]) => nav === true)
+						.map(
+							([route, { name, label }]) => /*html*/ `
+								<li>
+									<a id="nav-link-${name}" href=${route}>
+										${label}
+									</a>
+								</li>
+							`
+						)
+						.join('')}
+				</ul>
+			</nav>
+		</div>
 	`
 
 	registerNavLinks(ROUTES)

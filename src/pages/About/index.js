@@ -7,7 +7,7 @@ const About = () => ({
 	render: () => {
 		return /*html*/ `
 		<div class='about_header_container'>
-			<h1>Sobre mim</h1>
+			<h1>Sobre</h1>
 			<button class='action_button'>
 				<ion-icon name='arrow-down'></ion-icon>
 				Baixar CV
@@ -20,7 +20,7 @@ const About = () => ({
 				${Skills()}
 			</div>
 
-			<h1>Experiencia</h1>
+			<h1>Experiência</h1>
 
 			<div class='about_experience_container'>
 				${renderExperience()}

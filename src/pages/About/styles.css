@@ -131,6 +131,12 @@
 	opacity: 1;
 }
 
+@media only screen and (max-width: 480px) {
+	.resume {
+		display: none;
+	}
+}
+
 .tab input:checked ~ .tab__label .resume {
 	opacity: 0;
 }
