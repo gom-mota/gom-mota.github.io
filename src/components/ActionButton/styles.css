@@ -1,0 +1,197 @@
+.action_button_container {
+	border-radius: 5px;
+	border: 1px solid #f5f8faf0;
+	background-color: transparent;
+	color: var(--color-text);
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0.3rem 0.6rem;
+	box-shadow: 0 8px 12px -10px #000000bf;
+	transition: background-color 0.4s;
+	display: flex;
+	gap: 0.3rem;
+	position: relative;
+	transition: all 0.3s ease-in;
+	text-decoration: none !important;
+	font-size: var(--text-small);
+}
+
+.action_button_container button {
+	padding: 0;
+}
+
+.action_button_container span {
+	transition: all 0.3s ease-in;
+}
+
+.action_button_container ion-icon {
+	font-size: 15px;
+	transition: all 0.3s ease-in;
+	font-size: var(--text-small);
+}
+
+.action_button_container::before {
+	transition: all 0.4s cubic-bezier(0.5, 0, 0.1, 2);
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	opacity: 0;
+	background: #f5f8faf0;
+	border-radius: 5px;
+	color: var(--color-background);
+	box-shadow: 0 8px 12px -10px #000000bf;
+}
+
+.action_button_container:hover::before {
+	opacity: 1;
+	padding: 0.8rem;
+}
+
+.action_button_container:hover {
+	box-shadow: none;
+	border: 1px solid transparent;
+}
+
+.action_button_container:hover ion-icon {
+	color: var(--color-background);
+}
+
+.action_button_container:hover span {
+	color: var(--color-background);
+}
+
+.action_button_container.icon_only {
+	padding: 0.5rem 0.5rem;
+	border: none;
+	box-shadow: none;
+}
+
+.action_button_container.icon_only ion-icon {
+	font-size: 24px;
+	position: relative;
+	top: 50%;
+}
+
+.action_button_container.icon_only:hover::before {
+	padding: 1rem 1rem;
+	opacity: 1;
+}
+
+.action_button_container.icon_only:hover {
+	box-shadow: none;
+	border: none;
+}
+
+.action_button_container.icon_only::before {
+	transition: all 0.4s cubic-bezier(0.5, 0, 0.1, 1.6);
+	border-radius: 20%;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	z-index: -1;
+	opacity: 0;
+	background: #f5f8faf0;
+	box-shadow: 0 8px 12px -7px #000000bf;
+}
+
+.button-dropdown:focus-within .button-dropdown-menu {
+	display: block;
+}
+
+.button-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.button-dropdown .button-dropdown-menu {
+	position: absolute;
+	top: 100%;
+	border-radius: 3px;
+	right: 0;
+	list-style: none;
+	padding: 0.4rem 0;
+	opacity: 0;
+	background-color: white;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
+	z-index: 1010;
+	visibility: hidden;
+	transition: transform 0.2s ease-in, opacity 0.2s ease-in-out;
+	transform: translateY(-10px);
+}
+
+.button-dropdown .button-dropdown-menu:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	border-top: 0;
+}
+
+.button-dropdown .button-dropdown-menu:after {
+	left: 87%;
+	bottom: 100%;
+	transform: translate(0, 4px);
+	border-bottom-color: #f5f8faf0;
+	border-width: 8px;
+}
+
+.button-dropdown .button-dropdown-menu li {
+	display: block;
+	white-space: nowrap;
+}
+
+.button-dropdown .button-dropdown-menu li ion-icon {
+	color: var(--color-background);
+}
+
+.button-dropdown:focus-within .button-dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(12px);
+}
+
+.button-dropdown .action_button_container:focus-within {
+	background: #f5f8faf0;
+}
+
+.button-dropdown .action_button_container:focus-within span {
+	color: var(--color-background);
+}
+
+.button-dropdown .action_button_container:focus-within ion-icon {
+	color: var(--color-background);
+}
+
+.button-dropdown a {
+	text-decoration: none;
+	color: var(--color-background);
+	padding: 0.4rem 1rem;
+	display: flex;
+	flex-direction: row;
+	gap: 0.3rem;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 14px;
+	font-weight: 500;
+	transition: background 0.2s;
+}
+
+.button-dropdown a:hover {
+	background-color: #00000014;
+}

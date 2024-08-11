@@ -1,3 +1,4 @@
+// Functions
 import { conditionalRender } from '/src/functions.js'
 
 class InfoBadge extends HTMLElement {

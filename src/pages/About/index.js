@@ -1,29 +1,40 @@
-import Skills from '/src/common/Skills/index.js'
+// Functions
 import { renderExperience, renderDescription } from './functions.js'
 
+// Items
+import Skills from '/src/common/Skills/index.js'
+
 const About = () => ({
-	title: 'About',
-	description: 'This is the About page',
+	title: 'Sobre',
+	description: 'Página sobre',
 	render: () => {
 		return /*html*/ `
-		<div class='about_header_container'>
-			<h1>Sobre</h1>
-			<button class='action_button'>
-				<ion-icon name='arrow-down'></ion-icon>
-				Baixar CV
-			</button>
-		</div>
-			<div class='about_description_container'>
-				${renderDescription()}				
-			</div>
-			<div class='about_skills_container'>
-				${Skills()}
+			<div class="section_container section_space">
+				<div class='about_header_container'>
+					<h1 class="section_title">Sobre</h1>
+
+					<!-- <action-button 
+						icon="arrow-down"
+						label="Baixar CV"
+						url="#">
+					</action-button> -->
+				</div>
+
+				<div class='about_description_container'>
+					${renderDescription()}				
+				</div>
 			</div>
 
-			<h1>Experiência</h1>
+			<div class="section_space">
+					${Skills()}
+			</div>
 
-			<div class='about_experience_container'>
-				${renderExperience()}
+			<div class='section_container'>
+				<h1 class="section_title">Experiência</h1>
+
+				<div class="experience_container">
+					${renderExperience()}
+				</div>
 			</div>
         `
 	},

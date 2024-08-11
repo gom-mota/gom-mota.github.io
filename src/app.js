@@ -1,5 +1,5 @@
 import './router.js'
-import './components/ActionIcon/index.js'
+import './components/ActionButton/index.js'
 import './components/HighlightCard/index.js'
 import './components/InfoBadge/index.js'
 

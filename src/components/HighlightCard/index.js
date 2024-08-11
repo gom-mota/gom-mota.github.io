@@ -1,3 +1,4 @@
+// Functions
 import { conditionalRender } from '/src/functions.js'
 
 class HighlightCard extends HTMLElement {
@@ -12,7 +13,7 @@ class HighlightCard extends HTMLElement {
 
 		this.innerHTML = /*html*/ `
         <style>
-            @import url('/src/components/HighlightCard/style.css');
+            @import url('/src/components/HighlightCard/styles.css');
         </style>
 
 		<div class="highlight_card_container">

@@ -6,7 +6,7 @@ const Skills = () => {
 
 	return /*html*/ `
 				<div class="section_container">
-                    <h1>Conhecimentos</h1>
+					<h1 class="section_title">Conhecimentos</h1>
 
                     <div class="skills_badge_container">
                         ${skills

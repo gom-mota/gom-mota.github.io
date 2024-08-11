@@ -9,7 +9,7 @@ const Social = () => {
                 ${Object.entries(social)
 					.map(
 						([key, value]) =>
-							/*html*/ `<action-icon icon="logo-${key}" url="${value}"></action-icon>`
+							/*html*/ `<action-button icon="logo-${key}" url="${value}"></action-button>`
 					)
 					.join('')}
             </div>                

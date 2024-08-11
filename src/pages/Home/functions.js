@@ -1,5 +1,8 @@
-import { CONFIG } from '/src/utils.js'
+// Functions
 import { navigateToRoute } from '/src/functions.js'
+
+// Utils
+import { CONFIG } from '/src/utils.js'
 
 export const registerLinks = () => {
 	const linkHighlightsElement = document.querySelector(
@@ -20,14 +23,6 @@ export const registerLinks = () => {
 			navigateToRoute(linkAboutElement.getAttribute('href'))
 		})
 }
-
-export const renderSocialAccountsList = () =>
-	Object.entries(CONFIG.social)
-		.map(
-			([key, value]) =>
-				/*html*/ `<action-icon icon="logo-${key}" url="${value}"></action-icon>`
-		)
-		.join('')
 
 export const getRepositoriesList = async () => {
 	const url = `https://api.github.com/users/${CONFIG.github.username}/repos`

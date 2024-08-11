@@ -8,8 +8,17 @@ body {
 	color-scheme: dark;
 }
 
-p {
+p,
+li {
 	line-height: 1.3rem;
+}
+
+a {
+	text-decoration-color: var(--color-description);
+}
+
+a:hover {
+	text-decoration-color: var(--color-text);
 }
 
 .main_container {
@@ -28,7 +37,7 @@ p {
 	gap: var(--spacing-medium);
 }
 
-.section_container h1 {
+.section_title {
 	font-size: var(--text-regular);
 	font-weight: 600;
 	letter-spacing: 1px;

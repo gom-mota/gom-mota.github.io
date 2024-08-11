@@ -41,15 +41,17 @@ const Home = async () => {
 			<div class="section_space">
 				${Skills()}
 				
-				<a id="link-about-page" class="link_route" href="/about">
+				<a id="link-about-page" class="link_route about" href="/about">
 					Ver mais sobre <ion-icon name="arrow-forward"></ion-icon>
 				</a>
 			</div>
 				
 			<div class="section_container">
-				<h1>Destaques fixados</h1>
+				<h1 class="section_title">Destaques fixados</h1>
 
-				${renderRepositoriesList(repositoriesListData)}
+				<div class="fixed_highlights_container">
+					${renderRepositoriesList(repositoriesListData)}
+				</div>
 
 				<a id="link-highlights-page" class="link_route" href="/highlights">
 					Ver mais destaques <ion-icon name="arrow-forward"></ion-icon>
@@ -59,8 +61,8 @@ const Home = async () => {
 	}
 
 	return {
-		title: 'Home',
-		description: 'This is the Home page',
+		title: 'Início',
+		description: 'Página inicial',
 		render,
 		after_render: () => registerLinks(),
 	}
