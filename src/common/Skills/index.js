@@ -1,13 +1,14 @@
+// Utils
 import { CONFIG } from '/src/utils.js'
 
 const Skills = () => {
 	const { skills } = CONFIG.about
 
 	return /*html*/ `
-				<div class="skills_container">
-                    <h1>Conhecimentos</h1>
+				<div class="section_container">
+					<h1 class="section_title">Conhecimentos</h1>
 
-                    <div class="skills_badges_container">
+                    <div class="skills_badge_container">
                         ${skills
 							.map(
 								({ name, icon, color }) => /*html*/ `

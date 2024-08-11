@@ -1,4 +1,7 @@
+// Functions
 import { conditionalRender } from '/src/functions.js'
+
+// Utils
 import { CONFIG } from '/src/utils.js'
 
 export const renderExperience = () =>
@@ -8,38 +11,47 @@ export const renderExperience = () =>
 				{ company, position, period, description, list },
 				index
 			) => /*html*/ ` 
-		<div class="tab">
-					<input type="checkbox" name="experience" id="experience-${index}" ${
-				index === 0 ? 'checked' : ''
-			} />
-					<div class="tab__label">
+				<div class="experience_card_container">
+					<input 
+						name="experience"
+						id="experience-${index}"
+						type="checkbox"
+						${index === 0 ? 'checked' : ''}
+					/>
+
+					<div class="experience_title_container">
 						<label for="experience-${index}">
 							<div>${company}</div>
 
-							<div class="resume">
-								<div class="position">
+							<div class="experience_main_info">
+								<div class="experience_position">
 									${position}
 								</div>
 
-								<div class="period">
+								<div class="experience_period">
 									${period}
 								</div>
 							</div>
 						</label>
 					</div>
-					<div class="tab__container">
-						<div class="tab__content">
-							<div class="resume_open">
+					
+					<div class="experience_description_container">
+						<div class="experience_content_container">
+							
+							<div class="experience_main_info_open">
 								<p>${position}</p>
-								<p class="period">${period}</p>
+								
+								<p class="experience_period">${period}</p>
 							</div>
+
 							${conditionalRender(description, /*html*/ `<p>${description}</p>`)}
 
 							${conditionalRender(
 								list && list.length > 0,
-								/*html*/ `<ul>${list
-									.map((item) => /*html*/ `<li>${item}</li>`)
-									.join('')}</ul>`
+								/*html*/ `
+									<ul>
+										${list.map((item) => /*html*/ `<li>${item}</li>`).join('')}
+									</ul>`
 							)}
 						</div>
 					</div>
@@ -49,10 +61,4 @@ export const renderExperience = () =>
 		.join('')
 
 export const renderDescription = () =>
-	CONFIG.about.description
-		.map(
-			(text) => /*html*/ `
-<p>${text}</p>
-`
-		)
-		.join('')
+	CONFIG.about.description.map((text) => /*html*/ `<p>${text}</p>`).join('')

@@ -13,8 +13,8 @@ export const CONFIG = {
 	github: {
 		username: 'gom-mota',
 		repos: {
-			home: ['beework', 'portfolio-dev'],
-			highlights: ['beework', 'portfolio-dev', 'teste_seidor'],
+			home: ['portfolio-dev', 'beework'],
+			highlights: ['portfolio-dev', 'beework', 'gom-mota.github.io'],
 		},
 	},
 	about: {
@@ -22,9 +22,8 @@ export const CONFIG = {
 			`Formado em Sistemas de Informação, atualmente sou desenvolvedor frontend na empresa
 			<a href="https://www.seidor.com/" target="_blank">Seidor</a>, e utilizo o framework React nos projetos em que atuo.`,
 			`Tenho experiencia em criar soluções web dinâmicas e responsivas com foco na usabilidade do usuário. Busco
-			sempre adotar as melhores práticas para garantir que o código seja escalável e de alta qualidade. Organizo o
-			código em módulos bem definidos, cada um com responsabilidades específicas, e aplico testes automatizados
-			para assegurar a integridade do software.`,
+			sempre adotar as melhores práticas de acordo com o contexto da aplicação para garantir que o código seja
+			escalável, testável e de alta qualidade.`,
 			`Além das ferramentas que utilizo diariamente no trabalho, tenho interesse em Linux e no mundo Open Source
 			em geral, e estou constantemente explorando projetos e ferramentas que possam inspirar novas ideias.`,
 		],

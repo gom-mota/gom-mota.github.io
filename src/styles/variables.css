@@ -8,14 +8,17 @@
 
 	--text-xsmall: 0.8rem;
 	--text-small: 0.9rem;
-	--text-medium: 1rem;
+	--text-regular: 1.063rem;
+	--text-medium: 1.2rem;
 	--text-large: 2rem;
 
 	--border-small: 0.3rem;
+	--border-medium: 0.6rem;
 
 	--spacing-xsmall: 0.3rem;
 	--spacing-small: 0.6rem;
-	--spacing-medium: 1rem;
+	--spacing-regular: 1rem;
+	--spacing-medium: 1.5rem;
 	--spacing-large: 2rem;
 	--spacing-xlarge: 4rem;
 

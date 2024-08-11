@@ -1,4 +1,4 @@
-.footer {
+.footer_container {
 	display: flex;
 	margin-top: var(--spacing-xlarge);
 	align-items: center;

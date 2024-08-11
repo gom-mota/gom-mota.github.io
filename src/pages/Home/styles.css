@@ -1,66 +1,87 @@
-.home_highlights_container {
-	margin-top: 1.5rem;
-}
-
 .profile_container {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-medium);
-	justify-content: space-between;
+	display: grid;
+	grid-template-areas:
+		'profile_avatar profile_base'
+		'profile_description profile_description'
+		'profile_social profile_social';
+	grid-template-columns: minmax(64px, auto) 1fr;
+	grid-template-rows: auto;
+	gap: 1rem;
 	margin-bottom: var(--spacing-xlarge);
 }
 
-.profile_base {
+.profile_base_container {
+	grid-area: profile_base;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-small);
-	max-width: 540px;
 }
 
-.description {
-	margin-top: 0.6rem;
-	line-height: 1.4rem;
-	color: var(--color-description);
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.profile_name {
+.profile_base_container h1 {
 	font-size: var(--text-large);
 	font-weight: 900;
 }
 
-.profile_avatar img {
-	width: 120px;
-	height: 120px;
-	border-radius: 0.6rem;
+.profile_avatar_container {
+	grid-area: profile_avatar;
+}
+
+.profile_avatar_container img {
+	width: 64px;
+	height: 64px;
+	border-radius: var(--border-medium);
 	box-shadow: 0 22px 17px -27px #000000bf;
 }
 
-.profile_social {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-xsmall);
-	margin-top: var(--spacing-medium);
+.profile_description_container {
+	grid-area: profile_description;
+}
+
+.profile_description_container p {
+	color: var(--color-description);
+}
+
+.profile_social_container {
+	grid-area: profile_social;
+}
+
+@media only screen and (min-width: 480px) {
+	.profile_container {
+		justify-content: space-between;
+		grid-template-areas:
+			'profile_base profile_avatar'
+			'profile_description profile_avatar'
+			'profile_social profile_social';
+		grid-template-columns: auto auto;
+		grid-template-rows: var(--spacing-xlarge) auto auto;
+	}
+
+	.profile_avatar_container img {
+		width: 120px;
+		height: 120px;
+	}
 }
 
 .link_route {
-	margin-top: 1.5rem;
 	display: flex;
 	flex-direction: row;
 	width: max-content;
-	padding: 0.3rem 0.5rem;
+	padding: 0.3rem 0;
 	border-radius: 0.2rem;
-	text-decoration-color: var(--color-description);
 	transition: gap 0.2s ease-out;
-	gap: 0;
+	gap: 0.3rem;
+}
+
+.link_route.about {
+	margin-top: var(--spacing-medium);
 }
 
 .link_route:hover {
-	gap: 0.2rem;
-	text-decoration-color: var(--color-text);
+	gap: 0.5rem;
 }
 
-.home_skills_container {
-	margin-bottom: 3rem;
+.fixed_highlights_container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-regular);
 }

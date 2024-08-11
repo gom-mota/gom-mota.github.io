@@ -1,11 +1,16 @@
-import { CONFIG } from '/src/utils.js'
+// Functions
 import {
 	getRepositoriesList,
 	renderRepositoriesList,
-	renderSocialAccountsList,
 	registerLinks,
 } from './functions.js'
+
+// Items
+import Social from '/src/common/Social/index.js'
 import Skills from '/src/common/Skills/index.js'
+
+// Utils
+import { CONFIG } from '/src/utils.js'
 
 const Home = async () => {
 	const repositoriesListData = await getRepositoriesList()
@@ -14,49 +19,50 @@ const Home = async () => {
 		const { name, work, bio, avatar } = CONFIG.profile
 
 		return /*html*/ `
-			 <div class="profile_container">
-
-				<div class="profile_base">
-					<h1 class="profile_name">${name}</h1>
-					
-					<p>${work}</p>
-
-					<p class="description">${bio}</p>
-					
-					<div class="profile_social">
-						${renderSocialAccountsList()}
-					</div>
-				</div>
-
-				<div class="profile_avatar">
+			<div class="profile_container">
+                <div class="profile_avatar_container">
 					<img src="${avatar}" />
 				</div>
 
-			</div>
+                <div class="profile_base_container">
+                    <h1>${name}</h1>
+                    <p>${work}</p>
+                </div>
 
-			<div class="home_skills_container">
+                <div class="profile_description_container">
+                    <p>${bio}</p>
+                </div>
+
+                <div class="profile_social_container">
+                    ${Social()}
+                </div>
+            </div>
+
+			<div class="section_space">
 				${Skills()}
 				
-				<a id="link-about-page" class="link_route" href="/about">
-					Ver mais sobre &nbsp;<ion-icon name="arrow-forward"></ion-icon>
+				<a id="link-about-page" class="link_route about" href="/about">
+					Ver mais sobre <ion-icon name="arrow-forward"></ion-icon>
 				</a>
 			</div>
+				
+			<div class="section_container">
+				<h1 class="section_title">Destaques fixados</h1>
 
-			<h1>Destaques fixados</h1>
-
-			<div class="home_highlights_container">
-				${renderRepositoriesList(repositoriesListData)}
+				<div class="fixed_highlights_container">
+					${renderRepositoriesList(repositoriesListData)}
+				</div>
 
 				<a id="link-highlights-page" class="link_route" href="/highlights">
-					Ver mais destaques &nbsp;<ion-icon name="arrow-forward"></ion-icon>
+					Ver mais destaques <ion-icon name="arrow-forward"></ion-icon>
 				</a>
 			</div>
 		`
 	}
 
 	return {
-		title: 'Home',
-		description: 'This is the Home page',
+		title: 'Início',
+		description: 'Página inicial',
 		render,
 		after_render: () => registerLinks(),
 	}
