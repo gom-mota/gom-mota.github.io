@@ -47,14 +47,14 @@ const Home = async () => {
 			</div>
 				
 			<div class="section_container">
-				<h1 class="section_title">Destaques fixados</h1>
+				<h1 class="section_title">Fixados</h1>
 
 				<div class="fixed_highlights_container">
 					${renderRepositoriesList(repositoriesListData)}
 				</div>
 
-				<a id="link-highlights-page" class="link_route" href="/highlights">
-					Ver mais destaques <ion-icon name="arrow-forward"></ion-icon>
+				<a id="link-highlights-page" class="link_route" href="/creations">
+					Ver mais criações <ion-icon name="arrow-forward"></ion-icon>
 				</a>
 			</div>
 		`

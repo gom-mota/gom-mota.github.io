@@ -12,8 +12,8 @@
 	padding: 1.3rem var(--spacing-regular);
 	text-decoration: none;
 	cursor: pointer;
-	background: linear-gradient(20deg, #ffffff08, var(--color-background) 70%);
-	border: 1px solid #ffffff0d;
+	background: linear-gradient(20deg, #272c35, var(--color-background) 70%);
+	border: 1px solid #2c313b;
 	border-radius: var(--border-small);
 	box-shadow: 0 22px 17px -27px #000000bf;
 	font-size: var(--text-small);
@@ -26,7 +26,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: linear-gradient(-20deg, #ffffff08, var(--color-background) 70%);
+	background: linear-gradient(-20deg, #272c35, var(--color-background) 70%);
 	z-index: -1;
 	transition: opacity 0.4s linear;
 	opacity: 0;

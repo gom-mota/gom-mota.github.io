@@ -6,7 +6,7 @@ const Footer = () => {
 
 	footerElement.innerHTML = /*html*/ `
         <div class="footer_container">
-            <p>&copy; gommota</p> 
+            <p>&copy; 2024 gommota</p> 
             
             <div>${Social()}</div>
         </div>

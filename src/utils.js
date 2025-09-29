@@ -13,8 +13,13 @@ export const CONFIG = {
 	github: {
 		username: 'gom-mota',
 		repos: {
-			home: ['portfolio-dev', 'beework'],
-			highlights: ['portfolio-dev', 'beework', 'gom-mota.github.io'],
+			home: ['gomui', 'portfolio-dev'],
+			creations: [
+				'gomui',
+				'gom-mota.github.io',
+				'portfolio-dev',
+				'beework',
+			],
 		},
 	},
 	about: {
@@ -30,13 +35,16 @@ export const CONFIG = {
 		skills: [
 			{ name: 'git', icon: 'git-merge', color: '#E84E31' },
 			{ name: 'javascript', icon: 'logo-javascript', color: '#ECDA1D' },
+			{ name: 'typescript', icon: '' },
 			{ name: 'html5', icon: 'logo-html5', color: '#DD4B25' },
 			{ name: 'css', icon: 'logo-css3', color: '#0185C4' },
 			{ name: 'figma', icon: 'logo-figma', color: '#9D56F7' },
-			{ name: 'nodejs', icon: 'logo-nodejs', color: '#7EC729' },
+			{ name: 'node', icon: 'logo-nodejs', color: '#7EC729' },
 			{ name: 'react/native', icon: 'logo-react', color: '#5ED3F3' },
+			{ name: 'nextjs', icon: '' },
 			{ name: 'redux', icon: '' },
 			{ name: 'api rest', icon: '' },
+			{ name: 'sql', icon: '' },
 			{ name: 'mysql', icon: '' },
 			{ name: 'mongodb', icon: '' },
 			{ name: 'php', icon: '' },
@@ -90,7 +98,7 @@ export const CONFIG = {
 			},
 		],
 	},
-	highlights: {
+	creations: {
 		explore: [
 			{
 				text: 'Repositórios Github',
@@ -109,5 +117,5 @@ export const CONFIG = {
 export const ROUTES = {
 	'/': { name: 'Home', label: 'Início', nav: true },
 	'/about': { name: 'About', label: 'Sobre', nav: true },
-	'/highlights': { name: 'Highlights', label: 'Destaques', nav: true },
+	'/creations': { name: 'Creations', label: 'Criações', nav: true },
 }

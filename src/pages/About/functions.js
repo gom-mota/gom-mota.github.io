@@ -1,6 +1,3 @@
-// Functions
-import { conditionalRender } from '/src/functions.js'
-
 // Utils
 import { CONFIG } from '/src/utils.js'
 
@@ -11,51 +8,25 @@ export const renderExperience = () =>
 				{ company, position, period, description, list },
 				index
 			) => /*html*/ ` 
-				<div class="experience_card_container">
-					<input 
-						name="experience"
-						id="experience-${index}"
-						type="checkbox"
-						${index === 0 ? 'checked' : ''}
-					/>
-
-					<div class="experience_title_container">
-						<label for="experience-${index}">
-							<div>${company}</div>
-
-							<div class="experience_main_info">
-								<div class="experience_position">
-									${position}
-								</div>
-
-								<div class="experience_period">
-									${period}
-								</div>
-							</div>
-						</label>
+				<gom-accordion title='${company}' ${index === 0 ? 'is-open' : ''}>
+					<div slot='description'>
+						<span>${position}</span>
+						<span style="color:#A9A9A9;font-size:14px;">${period}</span>
 					</div>
-					
-					<div class="experience_description_container">
-						<div class="experience_content_container">
-							
-							<div class="experience_main_info_open">
-								<p>${position}</p>
-								
-								<p class="experience_period">${period}</p>
-							</div>
 
-							${conditionalRender(description, /*html*/ `<p>${description}</p>`)}
+					<div>${description}</div>
 
-							${conditionalRender(
-								list && list.length > 0,
-								/*html*/ `
-									<ul>
-										${list.map((item) => /*html*/ `<li>${item}</li>`).join('')}
-									</ul>`
-							)}
-						</div>
+					<div>
+						${
+							list && list.length > 0
+								? /*html*/ `
+								<ul>
+									${list.map((item) => /*html*/ `<li>${item}</li>`).join('')}
+								</ul>`
+								: ''
+						}
 					</div>
-				</div>
+				</gom-accordion>
 		`
 		)
 		.join('')

@@ -5,14 +5,12 @@ import { navigateToRoute } from '/src/functions.js'
 import { CONFIG } from '/src/utils.js'
 
 export const registerLinks = () => {
-	const linkHighlightsElement = document.querySelector(
-		'#link-highlights-page'
-	)
+	const linkCreationsElement = document.querySelector('#link-highlights-page')
 
-	linkHighlightsElement &&
-		linkHighlightsElement.addEventListener('click', (event) => {
+	linkCreationsElement &&
+		linkCreationsElement.addEventListener('click', (event) => {
 			event.preventDefault()
-			navigateToRoute(linkHighlightsElement.getAttribute('href'))
+			navigateToRoute(linkCreationsElement.getAttribute('href'))
 		})
 
 	const linkAboutElement = document.querySelector('#link-about-page')

@@ -10,6 +10,7 @@
 	align-items: center;
 	gap: 0.4rem;
 	box-shadow: 0 6px 17px -10px #000000bf;
+	border: 1px solid #3c424d;
 }
 
 .badge_container.large {
