@@ -13,12 +13,6 @@
 	align-items: center;
 }
 
-.experience_container {
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-small);
-}
-
 .action_button {
 	border-radius: 5px;
 	border: 1px solid #f5f8faf0;
@@ -75,151 +69,18 @@
 	color: var(--color-background);
 }
 
-.experience_card_container input {
-	position: absolute;
-	opacity: 0;
-	z-index: -1;
-}
-
-.experience_description_container {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.6s ease-out;
-	background-color: #ffffff08;
-	box-shadow: 0 8px 12px -15px #000000bf;
-}
-
-.experience_content_container {
-	position: relative;
-	padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-}
-
-.experience_card_container input:checked ~ .experience_description_container {
-	max-height: 100vh;
-}
-
-.experience_card_container input:checked ~ .experience_title_container {
-	background-color: #ffffff08;
-	border-radius: 5px 5px 0 0;
-	box-shadow: none;
-}
-
-.experience_title_container:hover {
-	background-color: #ffffff08;
-	box-shadow: 0 8px 12px -15px #000000bf;
-	border-radius: 5px 5px 5px 5px;
-}
-
-.experience_main_info {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 1rem;
-	color: #cccccc;
-	transition: opacity 0.3s;
-	opacity: 1;
-}
-
-.experience_card_container
-	input:checked
-	~ .experience_title_container
-	.experience_main_info {
-	opacity: 0;
-}
-
-.experience_main_info_open {
+.experience_container {
 	display: flex;
 	flex-direction: column;
-	gap: 0.4rem;
-	transition: ease-in 0.6s;
-	padding: 0 0.4rem;
-	margin-bottom: 1.5rem;
-	max-height: 0;
-	opacity: 0;
+	gap: var(--spacing-small);
 }
 
-.experience_main_info_open::before {
-	content: '';
-	width: 0;
-	height: 45px;
-	z-index: 1;
-	position: absolute;
-	border: 1px dashed #ffffff36;
-	left: 15px;
-	top: 3px;
-}
-
-.experience_card_container
-	input:checked
-	~ .experience_description_container
-	.experience_content_container
-	.experience_main_info_open {
-	max-height: 5rem;
-	opacity: 1;
-}
-
-.experience_main_info::before {
-	content: '';
-	flex: 1;
-	border: 1px solid;
-	border-color: #ffffff36;
-	border-style: dashed;
-}
-
-.experience_position {
-	color: #cccccc;
-}
-
-.experience_period {
-	color: var(--color-description);
-	font-size: 14px;
-}
-
-.experience_title_container {
-	transition: background-color 0.4s;
-}
-
-.experience_title_container label {
-	display: flex;
-	color: white;
-	background-color: transparent;
-	cursor: pointer;
-	gap: 1rem;
-	white-space: nowrap;
-	padding: 0.8rem;
-	align-items: center;
-}
-
-.experience_title_container label::before {
-	content: '\276F';
-	width: 1em;
-	font-size: 10px;
-	height: 1em;
-	text-align: center;
-	transition: all 0.35s;
-	color: var(--color-description);
-}
-
-.experience_card_container
-	input:checked
-	+ .experience_title_container
-	label::before {
-	transform: rotate(90deg);
-}
-
-.experience_description_container ul {
+.experience_container ul {
 	list-style: circle;
 	margin-left: var(--spacing-large);
 	margin-top: 1.5rem;
 }
 
-.experience_description_container ul li:not(:first-child) {
+.experience_container ul li:not(:first-child) {
 	margin-top: 0.6rem;
-}
-
-@media only screen and (max-width: 480px) {
-	.experience_main_info {
-		display: none;
-	}
 }

@@ -11,7 +11,7 @@ const Header = () => {
 		<div class="header_container">
 		
 			<div class="header_logo_container">
-				<span>> gom</span> mota_
+				<span>> gom</span> <span>mota</span><span class='blink'>_</span>
 			</div>
 
 			<nav>

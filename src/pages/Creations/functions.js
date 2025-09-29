@@ -17,11 +17,11 @@ export const getRepositoriesList = async () => {
 
 export const renderRepositoriesList = (repositoriesList) =>
 	repositoriesList
-		.filter(({ name }) => CONFIG.github.repos.highlights.includes(name))
+		.filter(({ name }) => CONFIG.github.repos.creations.includes(name))
 		.sort(
 			(a, b) =>
-				CONFIG.github.repos.highlights.indexOf(a.name) -
-				CONFIG.github.repos.highlights.indexOf(b.name)
+				CONFIG.github.repos.creations.indexOf(a.name) -
+				CONFIG.github.repos.creations.indexOf(b.name)
 		)
 		.map(
 			({

@@ -22,18 +22,29 @@
 }
 
 .header_logo_container {
+	cursor: default;
 	font-size: var(--text-medium);
 	font-family: monospace;
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	font-size: 17px;
 	letter-spacing: 2px;
 }
 
-.header_logo_container span {
+.blink {
+	animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+.header_logo_container span:first-child {
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 15px;
 	letter-spacing: 1px;
 	font-family: var(--font-family);
 	margin-right: 2px;
